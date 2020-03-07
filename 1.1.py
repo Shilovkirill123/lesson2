@@ -1,5 +1,5 @@
-age_2=int(input('Введите Ваш возраст: '))
 def busy(age):
+
     if age <=6:
         return 'Детский сад'
     elif 7 <= age <=17:
@@ -8,5 +8,10 @@ def busy(age):
         return 'Вуз'
     else:
         return 'Пора работать'
-x=busy(age_2)
-print(x)
+
+if __name__ == "__main__":
+    
+    age_2=int(input('Введите Ваш возраст: '))
+    x=busy(age_2)
+    print(x)
+    
