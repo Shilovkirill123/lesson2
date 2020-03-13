@@ -7,18 +7,13 @@ school= [
     {'school_class' : '6A', 'assessments' : [3,5,5,4,3,4,4]}
 ]
 
+sum_school=0
+Number_of_classes=0
+for classes in school:
+    
+    grade_average = sum(classes['assessments'])/len(classes['assessments'])
+    print(f'Средняя оценка в {classes["school_class"]}: {grade_average}')
+    Number_of_classes += 1
+    sum_school += grade_average
 
-a=sum(school[0]['assessments'])/len(school[0]['assessments'])
-print(f'Средняя оценка 1A: {a}')
-b=sum(school[1]['assessments'])/len(school[1]['assessments'])
-print(f'Средняя оценка 2A: {b}')
-c=sum(school[2]['assessments'])/len(school[2]['assessments'])
-print(f'Средняя оценка 3A: {c}')
-d=sum(school[3]['assessments'])/len(school[3]['assessments'])
-print(f'Средняя оценка 3B: {d}')
-e=sum(school[4]['assessments'])/len(school[4]['assessments'])
-print(f'Средняя оценка 5A: {e}')
-f=sum(school[5]['assessments'])/len(school[5]['assessments'])
-print(f'Средняя оценка 6A: {f}')
-
-print(f'Средний бал по школе: {(a+b+c+d+e+f)/6}')
+print(f'Средняя оценка по школе: {Number_of_classes/sum_school} ')   

@@ -10,7 +10,7 @@ def discounted(price, discount, max_discount=20):
         else:
             return price - (price*discount/100)
     except (TypeError , ValueError) :
-        print('Вводить только числа')
+            return 'Вводить только числа'
 
 print(discounted(100,2))
 print(discounted('222',2))
